@@ -82,10 +82,9 @@ $(function() {
 
         // This function checks to see that data has been retrieved and the array 
         // length is not zero
-        it('are shown', function(done) {
-            expect($('.feed').children().length).not.toBe(0);
-            done();
-        })
+        it('are shown', function() {
+            expect($('.feed .entry').length).not.toBe(0);
+        });
 
     });
 
@@ -104,10 +103,9 @@ $(function() {
 
         // This function retrieves the title of the first entry from the second feed and
         // compares it to the title of the first entry from the first feed.
-        it('loads new text', function(done) {
+        it('loads new text', function() {
             var secondaryText = $('.feed').children()[0].innerText;
             expect(initialText).not.toBe(secondaryText);
-            done();
         });
 
     });
